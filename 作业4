@@ -1,0 +1,88 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta http-equiv = "content-type" content = "text/html;charset=utf-8">
+        <title>红岩</title>
+    </head>
+    <body>
+        <button type="button"  id = "top" >向上移动</button>
+        <button type="button"  id = "down">向下移动</button>
+        <button type="button"  id = "left">向左移动</button>
+        <button type="button"  id = "right">向右移动</button>
+        <button type="button"  id = "small">缩小</button>
+        <button type="button"  id = "big">放大</button>
+        <button type="button"  id = "returntop">返回顶部</button>
+        <script>
+        Function()
+        {
+        var a = document.createElement("div");
+        a.setAttribute("class","div1");
+        a.style.position = "absolute";
+        a.style.height = "150px";
+        a.style.width = "150px";
+        a.style.left = "600px";
+        a.style.top = "300px";
+        a.style.backgroundColor = "blue";
+        document.body.appendChild(a);
+        }
+        var bt_top=document.getElementById("top");
+        bt_top.onclick = function top()
+        {
+        a.style.top=parseInt(a.style.top) - 50 +"px";
+        }
+        down.onclick = function down()
+        {
+        a.style.top=parseInt(a.style.top) + 50 +"px";
+        }
+        left.onclick = function left()
+        {
+        a.style.left=parseInt(a.style.left) - 50 +"px";
+        }
+        right.onclick = function right()
+        {
+        a.style.left=parseInt(a.style.left) + 50 +"px";
+        }
+        big.onclick = function big()
+        {
+        a.style.height = "300px";
+        a.style.width = "300px";
+        }
+        small.onclick = function small()
+        {
+        a.style.height = "100px";
+        a.style.width = "100px";
+        }
+        var bt_returntop = document.getElementById("returntop");
+        function returntop()
+        {
+        bt_returntop.onclick = function() 
+        {
+        window.scrollTo(0,0);
+        }
+        }
+        </script>
+        <style>
+        .div1{
+        transition: width 2s,height 2s;
+        }
+        #returntop{
+        display: block;
+        position: fixed; 
+        bottom: 20px; 
+        right: 30px; 
+        z-index: 99; 
+        border: none;
+        outline: none; 
+        background-color: red; 
+        color: white; 
+        cursor: pointer; 
+        padding: 15px; 
+        border-radius: 10px; 
+        }
+        #returntop:hover
+        {
+        background-color: #555; 
+        }
+        </style>
+    </body>    
+</html>
