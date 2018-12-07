@@ -1,0 +1,84 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+
+<title>AJAX</title>
+
+</head>
+
+<body>
+<style>
+    #a3
+    {
+    padding:10px;
+    font-size:30px;
+    }
+    .a2
+    {
+    position:relative;
+    margin-top:10px;
+    }
+</style>
+<div id="a1"> </div>
+<div id="a2"> </div>
+<div id="a3"> </div>
+<div id="a4"> </div>
+<button class="b1" onclick="frontpage()">上一页</button>
+<button class="b2" onclick="nextpage()">下一页</button>
+<div>js真是魔鬼，菜鸡只能做成这样了</div>
+<script>
+var xmlhttp;
+  if (window.XMLHttpRequest)
+  {
+  xmlhttp=new XMLHttpRequest();
+  }
+  else
+  {
+  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+  }
+xmlhttp.onreadystatechange=function()
+  {
+  if (xmlhttp.readyState==4 && xmlhttp.status==200)
+    {
+    var text = xmlhttp.responseText;    
+    var val= unescape(text.replace(/\\/g,'%'));
+    val = val.replace(/},{/g,"<br>");
+    var i = 0;
+    document.getElementById("a2").innerHTML = val; 
+    }
+  }
+var page = 1;
+function nextpage()
+{
+  if ( page <= 10)
+  {
+    page = page + 1;
+    xmlhttp.open("GET","https://api.tumiv.com/v2/cqupt/student?page="+page+"&year=2015",true);
+  xmlhttp.send();
+  }
+  else
+  {
+    alert("这已经是最后一页了");
+  }
+}
+function frontpage()
+{
+  if ( page >= 1)
+  {
+    page = page - 1;
+    xmlhttp.open("GET","https://api.tumiv.com/v2/cqupt/student?page="+page+"&year=2015",true);
+    xmlhttp.send();
+  }
+  else
+  {
+    alert("这已经是第一页了");
+  }
+}
+xmlhttp.open("GET","https://api.tumiv.com/v2/cqupt/student?page="+page+"&year=2015",true);
+xmlhttp.send();
+</script>
+</body>
+
+</html>
+
