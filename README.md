@@ -1,2 +1,0 @@
-# redrock
-homework for redrock
