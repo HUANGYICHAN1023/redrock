@@ -1,0 +1,27 @@
+body{
+    font-size:16px； 
+    }    
+.a{
+    width:100%;
+    height:2.5rem;
+    z-index:1;
+}
+.b{
+    width:100%;
+    height:7.675rem;
+}
+.c{
+    background-color: #c2daff;
+    width:100%;
+    height:15.89rem;
+    position:relative;
+    bottom:2.15rem;
+    font-size:0.6rem;
+}
+@font-face {
+    font-family: "jump";
+    src: url(C:\Users\44204\Desktop\春学期第一次作业\jump.ttf) format("truetype");
+}
+.text{
+    font-family:jump;
+}
