@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>喵喵喵</title>
+    <link rel="stylesheet" href="grid.css" type="text/css">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+    <script>
+        window.onload=function(){
+            var oPrev=document.getElementById("prev");
+            var oNext=document.getElementById("next");
+            var oImg=document.getElementById("img");
+            var num=0;
+            var aUrl=new Array();
+            aUrl[0]="1.png";
+            aUrl[1]="2.png";
+            aUrl[2]="3.png";
+            oImg.src= aUrl[num];
+            var time = setInterval(turn,2000);
+            function tab(){
+                oImg.src=aUrl[num];
+            };
+            function turn(){
+                num++;
+                if(num==aUrl.length){
+                    num=0;
+                }
+                tab();
+            };
+            oNext.onclick=function(){
+                turn();
+            };
+            oPrev.onclick=function(){
+                num--;
+                if(num<0){
+                    num=aUrl.length-1;
+                }
+                tab();
+            };
+            oImg.onmousemove=function(){
+                clearInterval(time);
+            }
+            oImg.onmouseout=function(){
+                time = setInterval(turn,2000);
+            }
+        }
+    </script>
+</head>
+<body>
+
+<div class="title">
+    <div class="title_1">
+        <div class="title_1_l">
+        <div><img src="C:\Users\44204\Desktop\code\图片\用户.png" style="width: 15px;height: 15px;"><span>Agent Login</span></div>
+        <div><img src="C:\Users\44204\Desktop\code\图片\用户.png" style="width: 15px;height: 15px;"><span>Customer Login</span></div>
+        <div><img src="C:\Users\44204\Desktop\code\图片\文件.png" style="width: 15px;height: 15px;"><span>Not a Member ?<span style="color:#1dd2af;">Register</span></span></div>
+        <div><span>Call Us Now :815-123-4567</span></div>
+        <div class="title_1_r">
+                <div><img src="C:\Users\44204\Desktop\code\图片\facebook.png" style="width: 15px;height: 15px;"></div>
+                <div><img src="C:\Users\44204\Desktop\code\图片\鸟.png" style="width: 15px;height: 15px;"></div>
+                <div><img src="C:\Users\44204\Desktop\code\图片\tumblr.png" style="width: 15px;height: 15px;"></div>
+                <div><img src="C:\Users\44204\Desktop\code\图片\腾讯微博.png" style="width: 15px;height: 15px;"></div>
+            </div>
+        </div>
+    </div>
+    <div class="title_2">
+        <div class="title_2_1"><b style="color:#2c3e50;font-size: 32px;">V<b style="color:#1dd2af;font-size: 32px;">O</b>YAGE</b></div>
+        <div></div>
+
+    </div>
+</div>
+<div class="banner">
+    <div class="img">
+        <img src="" style="width: 1700px;height: 900px;" id="img">
+        <div id="prev"><a href="#"><b><</b></a></div>
+        <div id="next"><a href="#"><b>></b></a></div>
+    </div>
+    <div class="banner_line">
+
+    </div>
+</div>
+<div class="picture">
+    <div class="picture_span">
+    <span style="color:#2c3e50;font-size:28px;">Special Offers</span>
+    <span style="color:#626262;font-size:15px;">Best 2014 packages where people love to stay!</span>
+    </div>
+    <div class="picture_line">
+        <div><img src="img\4.png"></div>
+        <div><img src="img\5.png"></div>
+        <div><img src="img\6.png"></div>
+        <div><img src="img\7.png"></div>
+        <div><img src="img\8.png"></div>
+        <div><img src="img\9.png"></div>
+    </div>
+</div>
+<div class="yuan">
+    <div class="yuan_span">
+        <span style="color:white;font-size:28px;">HOLIDAYS TYPE</span>
+        <span style="color:white;font-size:15px;opacity: 0.5;padding-top:10px;">get explore your dream to travel the world!</span>
+    </div>
+    <div class="yuan_img">
+        <img src="img\10.png" >
+        <img src="img\11.png" >
+        <img src="img\12.png" >
+        <img src="img\13.png" >
+        <img src="img\14.png" >
+        <img src="img\15.png" >
+    </div>
+</div>
+<div class="text">
+    <div class="yuan_span">
+                <span style="color:#2c3e50;font-size:28px;">HAPPY CLIENITS</span>
+                <span style="color:#626262;font-size:15px;opacity: 0.5;padding-top:10px;">get explore your dream to travel the world!</span>
+    </div>
+    <div></div>
+</div>
+<div class="bottom">
+    <div class="bottom1">
+        <span style="color:#1dd2af;font-size:28px;">Newsletter</span>
+        <span style="font-size:14px;color:white;">Duis autem vel eum iriure dolor in </span>
+        <span style="font-size:14px;color:white;">hendrerit in vulputate velit esse </span>
+        <span style="font-size:14px;color:white;">molestie consequat, vel illum dolore.</span>
+        <div style="display:flex;margin-top:8px;">
+        <input type="Subscribes..." />
+        <button>GO</button>
+        </div>
+    </div>
+    <div class="bottom2" >
+        <span style="color:#1dd2af;font-size:28px;">Latest News</span>
+        <div class="bottom2_grid">
+            <img src="img\17.png" class="grid1">
+            <div style="display:flex;flex-direction: column;" class="grid2">
+                <span style="color:white;">Postformat Gallery: Multiple </span>
+                <span style="color:white;">images</span>
+                <span style="color:#1dd2af;">October 21, 2013 - 3:31 pm</span>
+            </div>
+            <img src="img\16.png" class="grid3">
+            <div style="display:flex;flex-direction: column;" class="grid4">
+                <span style="color:white;">Snowboarding is fun!</span>
+                <span style="color:#1dd2af;">December 12, 2012 - 9:11 pm</span>
+            </div>
+        </div>
+    </div>
+    <div class="bottom3">
+        <span style="color:#1dd2af;font-size:28px;">Tags</span>
+    <div class="bottom3_grid">
+        <div style="display:flex;flex-direction: row;">
+        <div style="border:2px solid white;border-radius:1px;" class="a3_1"><span style="display:flex;border:8px solid #2c3e50;">Agent Login</span></div>
+        <div style="border:2px solid white;border-radius:1px;" class="a3_2"><span style="display:flex;border:8px solid #2c3e50;">Customer Login</span></div>
+        </div>
+        <div style="display:flex;flex-direction: row;">
+        <div style="border:2px solid white;border-radius:1px;" class="a3_3"><span style="display:flex;border:8px solid #2c3e50;">Not a Member?</span></div>
+        <div style="border:2px solid white;border-radius:1px;" class="a3_4"><span style="display:flex;border:8px solid #2c3e50;">Contact</span></div>
+        </div>
+        <div style="display:flex;flex-direction: row;">
+        <div style="border:2px solid white;border-radius:1px;" class="a3_5"><span style="display:flex;border:8px solid #2c3e50;">New Horizons</span></div>
+        <div style="border:2px solid white;border-radius:1px;" class="a3_6"><span style="display:flex;border:8px solid #2c3e50;">Lanscape</span></div>
+        <div style="border:2px solid white;border-radius:1px;" class="a3_7"><span style="display:flex;border:8px solid #2c3e50;">Tags</span></div>
+        </div>
+        <div style="display:flex;flex-direction: row;">
+        <div style="border:2px solid white;border-radius:1px;" class="a3_8"><span style="display:flex;border:8px solid #2c3e50;">Nice</span></div>
+        <div style="border:2px solid white;border-radius:1px;" class="a3_9"><span style="display:flex;border:8px solid #2c3e50;">Some</span></div>
+        <div style="border:2px solid white;border-radius:1px;" class="a3_10"><span style="display:flex;border:8px solid #2c3e50;">Portrait</span></div>
+        </div>
+    </div>
+    </div>
+    <div class="bottom4">
+        <span style="color:#1dd2af;font-size:28px;">Address</span>
+        <span style="font-size:14px;color:white;">DieSachbearbeiter Schönhauser Allee  </span>
+        <span style="font-size:14px;color:white;">167c,10435 Berlin Germany</span>
+        <span style="font-size:14px;color:white;"><span style="color:#1dd2af;">E-mail: </span>moin@blindtextgenerator.de</span>
+    </div>
+</div>
+</body>
+</html>
