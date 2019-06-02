@@ -1,0 +1,145 @@
+body,html{
+    margin:0;
+}
+.title{
+    width:100%;
+    height: 22rem;
+    background-image:url(../img/cloud.jpg);
+}
+.select{
+    background:white;
+    
+
+}
+.select input{
+    color:#cccccc;
+    border-radius:0.6rem;
+    background:#f0f0f0;
+    border:none;
+    font-size: 0.5rem;
+    height:1rem;
+}
+.first{
+    width: 100%;
+    height:3.3rem;
+    padding-top:1rem;
+    display:flex;
+    justify-content: center;
+}
+.today{
+    font-size:0.6rem;
+    color:black;
+    display:grid;
+    grid-template-columns:3.5rem 3.5rem; 
+    grid-template-rows:1rem 1rem;
+} 
+.tomorrow{
+    font-size:0.6rem;
+    color:black;
+    display:grid;
+    grid-template-columns:3.5rem 3.5rem; 
+    grid-template-rows:1rem 1rem;
+} 
+/*boundry*/
+.second{
+    width:100%;
+    height:5rem;
+}
+.scroll1 ul li{
+    margin-left:0.9rem;
+}
+.scroll1{
+    overflow-x: auto;
+    overflow-y: hidden;
+    display:flex;
+}
+.hidden{
+    background:white;
+    width:100%;
+    height:0.9rem;
+    position:absolute;
+    top:31rem;
+    z-index:1;
+}
+
+.time{
+    font-size:0.4rem;
+    color:#cccccc;
+}
+.icon{
+    position:relative;
+    right:0.5rem;
+}
+.secondHot{
+    font-size:0.4rem;
+    position:relative;
+    left:0.15rem;
+}
+.second ul li{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+}
+/*boundry*/
+.third{
+    width:100%;
+}
+.third ul li{
+    display:flex;
+    flex-direction: column;
+    text-align: center;
+}
+.day{
+    
+    color:#cccccc;
+    display:flex;
+    flex-direction: column;
+}
+#sky{
+    font-size:0.4rem;
+    color:black;
+    margin-top:0.3rem;
+}
+.iccon{
+    position:relative;
+
+}
+.secondHot{
+    font-size:0.4rem;
+    position:relative;
+    left:0.15rem;
+}
+/*boundry*/
+.forth{
+    width:100%;
+    height:1rem;
+}
+/*boundry*/
+.fifth{
+    width:100%;
+}
+.sky{
+    color:black;
+    display:flex;
+    flex-direction: column;
+}
+.wind{
+    color:#cccccc;
+    display:flex;
+    flex-direction: column;
+    margin-top:0.5rem;
+}
+.fifth ul li{
+    display:flex;
+    flex-direction: column;
+    text-align: center;
+}
+/*boundry*/
+.sixth ul li{
+    display:flex;
+    flex-direction: column;
+    text-align: center;
+}
+.sixth ul li div img{
+    width:1rem;
+}
